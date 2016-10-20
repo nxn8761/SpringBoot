@@ -1,0 +1,10 @@
+---
+applications:
+- name:  SpringBoot
+  memory: 512M
+  instances: 1
+  path: C:\Workspaces\ProAnalytics\SpringBoot\build\libs\gs-spring-boot-0.1.0.jar
+  host: SpringBoot-ws-qa
+env:
+ SPRING_PROFILES_ACTIVE: cloud
+ JBP_CONFIG_OPEN_JDK_JRE: '[memory_calculator: {memory_sizes: {metaspace: 96m..}}]'
