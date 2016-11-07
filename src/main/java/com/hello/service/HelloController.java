@@ -24,6 +24,13 @@ public class HelloController {
     	cUSTDAO.getDetails();
     	cUSTDAO.test();
     	
+    	
+    	//REST Template Demo
+    	new TestController().getEmployees();
+    	new TestController().getEmployeesPostDemo();
+    	new TestController().getEmployeesPostDemoWithAutoConversion();
+    	new TestController().getEmployeesWithHeader();
+    	
         return "Greetings from Spring Boot! ";
     }
     

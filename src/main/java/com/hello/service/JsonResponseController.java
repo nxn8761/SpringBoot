@@ -18,8 +18,31 @@ import com.hello.beans.XMLResponse;
 @RestController
 public class JsonResponseController {
 
-	@RequestMapping(value ="/xmlResponse",method = RequestMethod.POST,produces=MediaType.APPLICATION_JSON_VALUE)
+	@RequestMapping(value ="/xmlResponse",method = RequestMethod.GET,produces=MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<XMLResponse> jsonResponse()
+	{
+		List<Cricket> responseList = new ArrayList<Cricket>();
+		Cricket cricket =  new Cricket();
+		cricket.setBall("SG");
+		cricket.setBat("MRF");
+		cricket.setDob(getSQLDateinMMDDYYYYFromString("2015-12-01"));
+		responseList.add(cricket);
+		
+		cricket =  new Cricket();
+		cricket.setBall("CORK");
+		cricket.setBat("WILLS");
+		cricket.setDob(getSQLDateinMMDDYYYYFromString("2014-11-01"));
+		
+		responseList.add(cricket);
+		XMLResponse response = new XMLResponse();
+		response.setCricketList(responseList);
+		
+		return new ResponseEntity<XMLResponse>(response,HttpStatus.OK);
+		//return responseList;
+	}
+	
+	@RequestMapping(value ="/jsonResponse",method = RequestMethod.POST,produces=MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<XMLResponse> jsonResponsePostMethod()
 	{
 		List<Cricket> responseList = new ArrayList<Cricket>();
 		Cricket cricket =  new Cricket();

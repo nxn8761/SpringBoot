@@ -29,7 +29,7 @@ dependencies {
 	// tag::actuator[]
 	compile("org.springframework.boot:spring-boot-starter-actuator")
 	
-	//compile("org.springframework.boot:spring-boot-starter-security")
+	compile("org.springframework.boot:spring-boot-starter-security")
 	
 	compile("org.springframework.boot:spring-boot-starter-jdbc:1.2.7.RELEASE")
 	

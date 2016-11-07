@@ -12,7 +12,7 @@ import javax.servlet.ServletResponse;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.GenericFilterBean;
 
-@Component
+//@Component
 public class AuthenticateFilter implements Filter
 {
 

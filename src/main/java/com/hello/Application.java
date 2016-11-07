@@ -39,7 +39,7 @@ public class Application
 		 	int b=5;
 		 	int c = a+b;
 		 	
-		 	System.out.println(appName);
+		 	System.out.println(appName + "c is "+ c);
 		}
 }
 
